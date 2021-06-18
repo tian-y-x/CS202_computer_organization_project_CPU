@@ -1,13 +1,13 @@
 `timescale 1ns / 1ps
 
 module Switch(switclk, switrst, switchread, switchcs,switchaddr, switchrdata, switch_i);
-    input switclk;			        //  Ê±ÖÓĞÅºÅ
-    input switrst;			        //  ¸´Î»ĞÅºÅ
-    input switchcs;			        //´ÓmemorioÀ´µÄswitchÆ¬Ñ¡ĞÅºÅ  !!!!!!!!!!!!!!!!!
-    input[1:0] switchaddr;		    //  µ½switchÄ£¿éµÄµØÖ·µÍ¶Ë  !!!!!!!!!!!!!!!
-    input switchread;			    //  ¶ÁĞÅºÅ
-    output [15:0] switchrdata;	    //  ËÍµ½CPUµÄ²¦Âë¿ª¹ØÖµ×¢ÒâÊı¾İ×ÜÏßÖ»ÓĞ16¸ù
-    input [23:0] switch_i;		    //  ´Ó°åÉÏ¶ÁµÄ24Î»¿ª¹ØÊı¾İ
+    input switclk;			        //  æ—¶é’Ÿä¿¡å·
+    input switrst;			        //  å¤ä½ä¿¡å·
+    input switchcs;			        //ä»memorioæ¥çš„switchç‰‡é€‰ä¿¡å·  !!!!!!!!!!!!!!!!!
+    input[1:0] switchaddr;		    //  åˆ°switchæ¨¡å—çš„åœ°å€ä½ç«¯  !!!!!!!!!!!!!!!
+    input switchread;			    //  è¯»ä¿¡å·
+    output [15:0] switchrdata;	    //  é€åˆ°CPUçš„æ‹¨ç å¼€å…³å€¼æ³¨æ„æ•°æ®æ€»çº¿åªæœ‰16æ ¹
+    input [23:0] switch_i;		    //  ä»æ¿ä¸Šè¯»çš„24ä½å¼€å…³æ•°æ®
     //input sled;
     
     reg [23:0] switchrdata;
