@@ -1,28 +1,28 @@
 `timescale 1ns / 1ps
 
 module vga_driver(
-        input sys_clk,              //ÏµÍ³Ê±ÖÓ100Mhz
+        input sys_clk,              //ç³»ç»Ÿæ—¶é’Ÿ100Mhz
         input vga_clk25,            //25Mhz
-        input vga_rst_n,            //¸´Î»
-        input [11:0] pixel_data,    //ÑÕÉ«Êı¾İ
+        input vga_rst_n,            //å¤ä½
+        input [11:0] pixel_data,    //é¢œè‰²æ•°æ®
         
-        output vga_hs,              //ĞĞ³¡Í¬²½
+        output vga_hs,              //è¡ŒåœºåŒæ­¥
         output vga_vs,
         output reg[10:0] H_DISP,
         output reg[10:0] V_DISP,
-        output [11:0] vga_rgb,      //Êä³öµ½ÏÔÊ¾ÆÁ
-        output [10:0] pixel_xpos,   //×ø±ê
+        output [11:0] vga_rgb,      //è¾“å‡ºåˆ°æ˜¾ç¤ºå±
+        output [10:0] pixel_xpos,   //åæ ‡
         output [10:0] pixel_ypos,
         output reg vga_clk_cur
     );
     reg [10:0] H_TOTAL; 
-    reg [10:0] H_FRONT; //ĞĞÏÔÊ¾Ç°ÑØ
+    reg [10:0] H_FRONT; //è¡Œæ˜¾ç¤ºå‰æ²¿
     reg [10:0] H_SYNC;
     reg [10:0] V_TOTAL; 
-    reg [10:0] V_FRONT; //ÁĞÏÔÊ¾Ç°ÑØ    
+    reg [10:0] V_FRONT; //åˆ—æ˜¾ç¤ºå‰æ²¿    
     reg [10:0] V_SYNC;
-    reg [10:0] H_BACK;  //ĞĞÏÔÊ¾ºóÑØ
-    reg [10:0] V_BACK;  //ÁĞÏÔÊ¾ºóÑØ
+    reg [10:0] H_BACK;  //è¡Œæ˜¾ç¤ºåæ²¿
+    reg [10:0] V_BACK;  //åˆ—æ˜¾ç¤ºåæ²¿
     
     always@(posedge sys_clk) begin
             H_TOTAL <= 11'd800;
