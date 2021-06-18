@@ -32,7 +32,7 @@ input[4:0] Shamt, // instruction[10:6], the amount of shift bits
 input[31:0] PC_plus_4, // pc+4
 // from controller
 input[1:0] ALUOp, //{ (R_format || I_format) , (Branch || nBranch) }
-input ALUSrc, // 1 means the 2nd operand is an immedite (except beq£¬bne£©
+input ALUSrc, // 1 means the 2nd operand is an immedite (except beqÂ£Â¬bneÂ£Â©
 input I_format, // 1 means I-Type instruction except beq, bne, LW, SW
 input Sftmd, // 1 means this is a shift instruction
 input Jr, // 1 means this is a jr instruction
